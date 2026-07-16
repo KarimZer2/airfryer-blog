@@ -1,0 +1,26 @@
+<section class="hero">
+  <span class="hero-eyebrow">Mis à jour chaque jour</span>
+  <h1 class="hero-title">Le bon airfryer, le bon réglage,<br>à chaque fois.</h1>
+  <p class="hero-sub">Guides d'achat, comparatifs et temps de cuisson testés, publiés quotidiennement pour vous éviter les mauvais choix.</p>
+</section>
+
+<section class="feed">
+  {% if latest %}
+  <a class="feed-featured" href="{{ asset_prefix }}articles/{{ latest.slug }}.html">
+    <span class="post-type-badge type-{{ latest.type }}">{{ latest.type_label }}</span>
+    <h2>{{ latest.title }}</h2>
+    <p>{{ latest.meta_description }}</p>
+    <span class="feed-date">{{ latest.date_fr }}</span>
+  </a>
+  {% endif %}
+
+  <div class="feed-grid">
+    {% for a in rest %}
+    <a class="feed-card" href="{{ asset_prefix }}articles/{{ a.slug }}.html">
+      <span class="post-type-badge type-{{ a.type }}">{{ a.type_label }}</span>
+      <h3>{{ a.title }}</h3>
+      <span class="feed-date">{{ a.date_fr }}</span>
+    </a>
+    {% endfor %}
+  </div>
+</section>

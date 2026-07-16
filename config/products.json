@@ -1,0 +1,51 @@
+{
+  "amazon_tag": "REMPLACE-MOI-21",
+  "products": [
+    {
+      "id": "philips-xxl",
+      "name": "Philips Airfryer XXL",
+      "asin": "B07GFQZ8FS",
+      "category": "haut-de-gamme",
+      "prix_indicatif": "199€",
+      "capacite": "7.3 L",
+      "points_forts": ["Technologie Twin TurboStar", "Grande capacité famille", "App connectée"]
+    },
+    {
+      "id": "ninja-af",
+      "name": "Ninja Air Fryer AF100",
+      "asin": "B07FDJMC9Q",
+      "category": "polyvalent",
+      "prix_indicatif": "129€",
+      "capacite": "3.8 L",
+      "points_forts": ["Rapport qualité-prix", "Cuve antiadhésive", "Compact"]
+    },
+    {
+      "id": "cosori-pro",
+      "name": "Cosori Pro II",
+      "asin": "B08H29LM4C",
+      "category": "milieu-de-gamme",
+      "prix_indicatif": "99€",
+      "capacite": "5.5 L",
+      "points_forts": ["13 programmes", "Silencieux", "Design compact"]
+    },
+    {
+      "id": "moulinex-easy-fry",
+      "name": "Moulinex Easy Fry Dual",
+      "asin": "B08K8QF4RN",
+      "category": "double-cuve",
+      "prix_indicatif": "149€",
+      "capacite": "2x4.2 L",
+      "points_forts": ["Deux cuves indépendantes", "Idéal familles", "Programmes synchronisés"]
+    },
+    {
+      "id": "tefal-easy-fry",
+      "name": "Tefal Easy Fry & Grill",
+      "asin": "B08CXW9J1L",
+      "category": "entree-de-gamme",
+      "prix_indicatif": "89€",
+      "capacite": "4.2 L",
+      "points_forts": ["Fonction grill intégrée", "Prix accessible", "Facile à nettoyer"]
+    }
+  ],
+  "note_disclosure_fr": "En tant que Partenaire Amazon, ce site réalise un bénéfice sur les achats remplissant les conditions requises."
+}

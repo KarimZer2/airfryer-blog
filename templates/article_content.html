@@ -1,0 +1,32 @@
+<article class="post">
+  <div class="post-meta">
+    <span class="post-type-badge type-{{ type }}">{{ type_label }}</span>
+    <time datetime="{{ date }}">{{ date_fr }}</time>
+  </div>
+
+  <div class="post-body">
+  {{ body_html }}
+  </div>
+
+  {% if products %}
+  <aside class="product-picks">
+    <h2 class="picks-title">Nos sélections mentionnées dans cet article</h2>
+    <div class="picks-grid">
+      {% for p in products %}
+      <a class="pick-card" href="{{ p.affiliate_url }}" target="_blank" rel="nofollow sponsored noopener">
+        <span class="pick-dial">
+          <svg viewBox="0 0 40 40"><circle class="dial-track" cx="20" cy="20" r="16"/><circle class="dial-fill" cx="20" cy="20" r="16"/></svg>
+        </span>
+        <span class="pick-name">{{ p.name }}</span>
+        <span class="pick-meta">{{ p.capacite }} · {{ p.prix_indicatif }}</span>
+        <span class="pick-cta">Voir le prix sur Amazon →</span>
+      </a>
+      {% endfor %}
+    </div>
+  </aside>
+  {% endif %}
+
+  <nav class="post-nav">
+    <a href="{{ asset_prefix }}index.html">← Tous les guides airfryer</a>
+  </nav>
+</article>

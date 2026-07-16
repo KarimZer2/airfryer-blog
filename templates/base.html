@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page_title }}</title>
+<meta name="description" content="{{ meta_description }}">
+<link rel="canonical" href="{{ site_url }}{{ canonical_path }}">
+<link rel="alternate" type="application/rss+xml" title="{{ site_name }}" href="{{ site_url }}/rss.xml">
+<meta property="og:title" content="{{ page_title }}">
+<meta property="og:description" content="{{ meta_description }}">
+<meta property="og:type" content="{{ og_type|default('website') }}">
+<meta property="og:url" content="{{ site_url }}{{ canonical_path }}">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ asset_prefix }}static/css/style.css">
+{% if schema_json %}
+<script type="application/ld+json">{{ schema_json }}</script>
+{% endif %}
+</head>
+<body>
+<div class="dial-bg" aria-hidden="true"></div>
+
+<header class="site-header">
+  <a href="{{ asset_prefix }}index.html" class="logo">
+    <span class="logo-dial" aria-hidden="true">
+      <svg viewBox="0 0 40 40"><circle class="dial-track" cx="20" cy="20" r="16"/><circle class="dial-fill" cx="20" cy="20" r="16"/></svg>
+    </span>
+    <span class="logo-text">Croustille<span class="logo-accent">&</span>Cie</span>
+  </a>
+  <p class="tagline">Le temps de cuisson, on s'en occupe.</p>
+</header>
+
+<main>
+{{ content }}
+</main>
+
+<footer class="site-footer">
+  <p class="disclosure">En tant que Partenaire Amazon, Croustille&amp;Cie réalise un bénéfice sur les achats remplissant les conditions requises. Les prix affichés sont indicatifs et peuvent varier.</p>
+  <p class="copyright">© {{ current_year }} Croustille&amp;Cie — Guides et comparatifs airfryer</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+:root{
+  --charcoal:#211D18;
+  --charcoal-soft:#2C2620;
+  --cream:#FBF3E7;
+  --gold:#F2A93B;
+  --gold-soft:#F7C978;
+  --rust:#C1440E;
+  --sage:#52734D;
+  --ink:#211D18;
+  --line: rgba(251,243,231,0.14);
+  --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--charcoal);
+  color:var(--cream);
+  font-family:var(--font-body);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+
+.dial-bg{
+  position:fixed; inset:0; z-index:-1; pointer-events:none;
+  background:
+    radial-gradient(circle at 85% 8%, rgba(242,169,59,0.16), transparent 45%),
+    radial-gradient(circle at 8% 92%, rgba(193,68,14,0.12), transparent 40%);
+}
+
+/* Header */
+.site-header{
+  max-width:920px; margin:0 auto; padding:2.75rem 1.5rem 1.25rem;
+  display:flex; flex-direction:column; gap:.35rem;
+  border-bottom:1px solid var(--line);
+}
+.logo{display:flex; align-items:center; gap:.6rem; text-decoration:none; color:var(--cream);}
+.logo-dial svg{width:30px; height:30px; display:block;}
+.dial-track{fill:none; stroke:rgba(251,243,231,0.2); stroke-width:4;}
+.dial-fill{fill:none; stroke:var(--gold); stroke-width:4; stroke-linecap:round;
+  stroke-dasharray:100.5; stroke-dashoffset:28; transform:rotate(-90deg); transform-origin:20px 20px;}
+.logo-text{font-family:var(--font-display); font-weight:700; font-size:1.4rem; letter-spacing:-0.01em;}
+.logo-accent{color:var(--gold);}
+.tagline{margin:0; color:rgba(251,243,231,0.55); font-size:.92rem; font-family:var(--font-mono);}
+
+/* Hero */
+.hero{max-width:920px; margin:0 auto; padding:4rem 1.5rem 2rem;}
+.hero-eyebrow{
+  display:inline-block; font-family:var(--font-mono); font-size:.78rem;
+  letter-spacing:.06em; text-transform:uppercase; color:var(--gold);
+  border:1px solid rgba(242,169,59,0.4); border-radius:999px; padding:.3rem .8rem; margin-bottom:1.4rem;
+}
+.hero-title{
+  font-family:var(--font-display); font-weight:700; font-size:clamp(2rem, 5vw, 3.2rem);
+  line-height:1.08; margin:0 0 1rem; letter-spacing:-0.02em;
+}
+.hero-sub{color:rgba(251,243,231,0.7); font-size:1.1rem; max-width:36em; margin:0;}
+
+/* Feed */
+.feed{max-width:920px; margin:0 auto; padding:1rem 1.5rem 5rem;}
+.feed-featured{
+  display:block; text-decoration:none; color:inherit;
+  background:linear-gradient(155deg, var(--charcoal-soft), var(--charcoal));
+  border:1px solid var(--line); border-radius:18px; padding:2.2rem;
+  margin-bottom:2.5rem; transition:border-color .2s ease;
+}
+.feed-featured:hover{border-color:rgba(242,169,59,0.5);}
+.feed-featured h2{font-family:var(--font-display); font-size:1.7rem; margin:.8rem 0 .6rem; line-height:1.2;}
+.feed-featured p{color:rgba(251,243,231,0.65); margin:0 0 1rem;}
+
+.feed-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(260px,1fr)); gap:1.1rem;}
+.feed-card{
+  display:block; text-decoration:none; color:inherit;
+  border:1px solid var(--line); border-radius:14px; padding:1.3rem;
+  transition:transform .15s ease, border-color .15s ease;
+}
+.feed-card:hover{transform:translateY(-2px); border-color:rgba(242,169,59,0.45);}
+.feed-card h3{font-family:var(--font-display); font-size:1.05rem; line-height:1.3; margin:.7rem 0 .8rem;}
+
+.feed-date{font-family:var(--font-mono); font-size:.78rem; color:rgba(251,243,231,0.45);}
+
+.post-type-badge{
+  display:inline-block; font-family:var(--font-mono); font-size:.7rem; text-transform:uppercase;
+  letter-spacing:.05em; padding:.25rem .6rem; border-radius:999px; color:var(--charcoal); font-weight:600;
+  background:var(--gold-soft);
+}
+.type-comparatif{background:var(--rust); color:var(--cream);}
+.type-guide-achat{background:var(--gold-soft);}
+.type-guide-recette{background:var(--sage); color:var(--cream);}
+.type-guide-entretien{background:var(--gold-soft);}
+.type-guide-technique{background:rgba(251,243,231,0.25); color:var(--cream);}
+.type-avis-produit{background:var(--rust); color:var(--cream);}
+
+/* Article */
+.post{max-width:720px; margin:0 auto; padding:3rem 1.5rem 5rem;}
+.post-meta{display:flex; align-items:center; gap:.9rem; margin-bottom:1.4rem;}
+.post-meta time{font-family:var(--font-mono); font-size:.82rem; color:rgba(251,243,231,0.5);}
+.post-body{background:var(--cream); color:var(--ink); border-radius:18px; padding:2.6rem;}
+.post-body h1{font-family:var(--font-display); font-size:clamp(1.8rem,4vw,2.5rem); line-height:1.15; margin-top:0;}
+.post-body h2{font-family:var(--font-display); font-size:1.45rem; margin-top:2.4rem; border-top:1px solid rgba(33,29,24,0.1); padding-top:1.6rem;}
+.post-body h3{font-family:var(--font-display); font-size:1.15rem; margin-top:1.6rem;}
+.post-body p{margin:1rem 0;}
+.post-body ul, .post-body ol{padding-left:1.3rem;}
+.post-body li{margin:.4rem 0;}
+.post-body a{color:var(--rust); font-weight:600;}
+.post-body strong{color:var(--charcoal);}
+
+/* Product picks */
+.product-picks{max-width:720px; margin:2.5rem auto 0; padding:0 0;}
+.picks-title{font-family:var(--font-display); font-size:1.2rem; margin-bottom:1rem;}
+.picks-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(220px,1fr)); gap:1rem;}
+.pick-card{
+  display:flex; flex-direction:column; gap:.3rem; text-decoration:none; color:var(--cream);
+  border:1px solid rgba(242,169,59,0.35); border-radius:14px; padding:1.1rem;
+  background:var(--charcoal-soft); transition:border-color .15s ease;
+}
+.pick-card:hover{border-color:var(--gold);}
+.pick-dial svg{width:26px; height:26px;}
+.pick-name{font-family:var(--font-display); font-weight:600; font-size:1rem;}
+.pick-meta{font-family:var(--font-mono); font-size:.78rem; color:rgba(251,243,231,0.55);}
+.pick-cta{margin-top:.4rem; font-size:.85rem; color:var(--gold); font-weight:600;}
+
+.post-nav{max-width:720px; margin:2.5rem auto 0; padding:0 1.5rem;}
+.post-nav a{color:rgba(251,243,231,0.65); text-decoration:none; font-family:var(--font-mono); font-size:.9rem;}
+.post-nav a:hover{color:var(--gold);}
+
+/* Footer */
+.site-footer{
+  max-width:920px; margin:0 auto; padding:2.5rem 1.5rem 4rem; border-top:1px solid var(--line);
+  color:rgba(251,243,231,0.45); font-size:.82rem;
+}
+.disclosure{max-width:50em;}
+.copyright{font-family:var(--font-mono);}
+
+@media (max-width:640px){
+  .post-body{padding:1.6rem;}
+}
