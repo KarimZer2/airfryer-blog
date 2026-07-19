@@ -2,7 +2,7 @@
   "amazon_tag": "croustille-21",
   "products": [
     {
-      "id": "philips-4000",
+      "id": "philips-xxl",
       "name": "Philips Airfryer Série 4000",
       "asin": "B0FNYCH1VL",
       "category": "haut-de-gamme",
@@ -10,7 +10,7 @@
       "points_forts": ["Fonction synchronisation", "Grande capacité famille", "App connectée"]
     },
     {
-      "id": "ninja-foodi",
+      "id": "ninja-af",
       "name": "Ninja Foodi Dual Zone AF500EU",
       "asin": "B0CFL49C1J",
       "category": "polyvalent",
@@ -18,7 +18,7 @@
       "points_forts": ["Double zone de cuisson", "Fonction Match Cook", "Cuve antiadhésive"]
     },
     {
-      "id": "twinfry",
+      "id": "cosori-pro",
       "name": "TwinFry Air Fryer",
       "asin": "B0GBXY2YKK",
       "category": "milieu-de-gamme",
@@ -26,7 +26,7 @@
       "points_forts": ["Revêtement céramique", "Fonctions multiples", "Séparateur inclus"]
     },
     {
-      "id": "moulinex-ez9228",
+      "id": "moulinex-easy-fry",
       "name": "Moulinex Easy Fry Dual EZ9228F0",
       "asin": "B0F6Y4SQX6",
       "category": "double-cuve",
@@ -34,7 +34,7 @@
       "points_forts": ["Deux cuves indépendantes", "7 programmes automatiques", "Séparateur intégré"]
     },
     {
-      "id": "tefal-ey5068",
+      "id": "tefal-easy-fry",
       "name": "Tefal EY5068",
       "asin": "B0CF9RXDTG",
       "category": "entree-de-gamme",
